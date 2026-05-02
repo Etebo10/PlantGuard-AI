@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plant Guard AI</title>
+    <title>PlantGuard AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
-    <h1>Welcome to Plant Guard AI</h1>
-    <p>Your assistant for plant care.</p>
+    <header>
+        <h1>PlantGuard AI - Crop Disease Detection</h1>
+    </header>
+    <main>
+        <section id="upload">
+            <h2>Upload an Image</h2>
+            <input type="file" id="imageInput" accept="image/*">
+            <button id="detectButton">Detect Disease</button>
+        </section>
+        <section id="result">
+            <h2>Detection Result</h2>
+            <p id="resultText"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 PlantGuard AI. All rights reserved.</p>
+    </footer>
 </body>
 </html>
