@@ -51,3 +51,6 @@ uploads/
 # OS
 Thumbs.db
 .DS_Store
+!efficientnet_best.h5
+!mobilenet_best.h5
+
