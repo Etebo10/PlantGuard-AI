@@ -504,4 +504,4 @@ if __name__ == '__main__':
     print("=" * 50)
     detector.load()
     print("\nServer running → http://localhost:5000\n")
-    app.run(debug=False, host='0.0.0.0', port=7860)
+    app.run(debug=False, host='0.0.0.0', port=5000)
