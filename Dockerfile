@@ -12,7 +12,11 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y \
     build-essential \
     python3-dev \
+    git \
+    git-lfs \
     && rm -rf /var/lib/apt/lists/*
+
+RUN git lfs install
 
 # Copy dependency files
 COPY requirements.txt ./
