@@ -18,6 +18,11 @@ RUN apt-get update && apt-get install -y \
 
 RUN git lfs install
 
+# Initialize a git repo and pull actual LFS model files from remote
+RUN git init
+RUN git remote add origin https://github.com/Etebo10/PlantGuard-AI.git
+RUN git lfs pull origin main
+
 # Copy dependency files
 COPY requirements.txt ./
 
