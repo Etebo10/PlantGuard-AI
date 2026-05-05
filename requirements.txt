@@ -14,6 +14,8 @@ opencv-python
 tensorflow==2.21.0
 streamlit
 gunicorn
+tensorflow
+keras
 
 # Web
 flask>=2.3.3
