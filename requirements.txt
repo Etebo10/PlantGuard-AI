@@ -13,6 +13,7 @@ numpy
 opencv-python
 tensorflow==2.21.0
 streamlit
+gunicorn
 
 # Web
 flask>=2.3.3
