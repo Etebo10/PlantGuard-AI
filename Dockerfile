@@ -18,10 +18,9 @@ RUN apt-get update && apt-get install -y \
 
 RUN git lfs install
 
-# Initialize a git repo and pull actual LFS model files from remote
-RUN git init
-RUN git remote add origin https://github.com/Etebo10/PlantGuard-AI.git
-RUN git lfs pull origin main
+# Download model files directly from GitHub
+RUN curl -L https://github.com/Etebo10/PlantGuard-AI/raw/main/mobilenet_best.h5 -o mobilenet_best.h5
+RUN curl -L https://github.com/Etebo10/PlantGuard-AI/raw/main/efficientnet_best.h5 -o efficientnet_best.h5
 
 # Copy dependency files
 COPY requirements.txt ./
