@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y \
     python3-dev \
     git \
     git-lfs \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 RUN git lfs install
