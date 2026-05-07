@@ -61,20 +61,9 @@ nav::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; hei
 .brand-text { font-family: var(--font-mono); font-size: .95rem; font-weight: 700; letter-spacing: .12em; color: var(--text); }
 .brand-text em { color: var(--g1); font-style: normal; }
 .nav-links { display: flex; gap: .3rem; }
-@media(max-width:900px){
-  .nav-links { position: fixed; top: 62px; left: 0; right: 0; flex-direction: column; background: rgba(2,4,7,.95); backdrop-filter: blur(24px); border-bottom: 1px solid var(--rim); padding: 1rem; gap: 1rem; transform: translateY(-100%); opacity: 0; visibility: hidden; transition: all .3s ease; z-index: 999; }
-  .nav-links.open { transform: translateY(0); opacity: 1; visibility: visible; }
-  .nl { padding: 12px 16px; font-size: .75rem; justify-content: center; }
-}
 .nl { padding: 6px 16px; border-radius: 20px; font-family: var(--font-mono); font-size: .68rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: all .25s; }
 .nl:hover { color: var(--g1); background: rgba(0,255,136,.06); }
 .nl.on { color: var(--g1); border: 1px solid rgba(0,255,136,.2); background: rgba(0,255,136,.05); }
-.hamburger { display: none; flex-direction: column; gap: 4px; background: none; border: none; cursor: none; padding: 8px; border-radius: 4px; transition: all .3s; }
-.hamburger:hover { background: rgba(0,255,136,.06); }
-.hamburger span { width: 20px; height: 2px; background: var(--text); transition: all .3s; }
-.hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
 .nav-status { display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: .65rem; font-weight: 500; letter-spacing: .12em; color: var(--g1); background: rgba(0,255,136,.06); border: 1px solid rgba(0,255,136,.15); padding: 6px 14px; border-radius: 4px; }
 .status-dot { width: 6px; height: 6px; background: var(--g1); border-radius: 50%; box-shadow: 0 0 8px var(--g1); animation: blink 2s ease-in-out infinite; }
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.2} }
@@ -329,121 +318,6 @@ footer::before { content:'';position:absolute;top:0;left:0;right:0;height:1px;ba
   .term-stats{grid-template-columns:repeat(2,1fr)}
   footer{flex-direction:column;text-align:center} .ft-links{justify-content:center}
   body{cursor:auto} .cur,.cur2{display:none}
-  .hamburger{display:flex}
-  .nav-status{display:none}
-}
-@media(max-width:768px){
-  nav{height:60px;padding:0 1rem}
-  .brand-mark{width:32px;height:32px;font-size:14px}
-  .brand-text{font-size:.85rem}
-  .hero{padding:4rem 1rem 2rem}
-  .sys-tag{margin-bottom:1.5rem}
-  .hero-sub{max-width:none;margin-bottom:2rem}
-  .hero-cta{flex-direction:column;gap:12px;margin-bottom:3rem}
-  .btn-scan,.btn-outline{padding:12px 24px;font-size:.7rem}
-  .term-stats{grid-template-columns:1fr;gap:8px}
-  .ts{padding:14px 16px}
-  .ts-val{font-size:1.3rem}
-  .ts-key{font-size:.55rem}
-  .crop-section{padding:4rem 1rem 3rem}
-  .cs-header{flex-direction:column;text-align:center;gap:1rem;margin-bottom:2.5rem}
-  .crop-title{font-size:2.5rem}
-  .crop-count{font-size:1.5rem}
-  .dc-body{padding:16px 18px 18px}
-  .dc-name{font-size:.95rem}
-  .dc-desc{font-size:.7rem}
-  .dc-pills{flex-direction:column;gap:4px}
-  .dc-pill{font-size:.55rem}
-  #scan,#analysis,#pipeline{padding:4rem 1rem}
-  .sec-title{font-size:2.5rem}
-  .sec-sub{font-size:.85rem}
-  .dropzone{padding:4rem 2rem}
-  .dz-title{font-size:1.5rem}
-  .dz-sub{font-size:.7rem;margin-bottom:1.5rem}
-  .scan-btn{padding:10px 22px;font-size:.7rem}
-  .dz-fmts{flex-direction:column;gap:6px;margin-top:1.5rem}
-  .dz-fmt{font-size:.55rem}
-  .model-sel{gap:10px}
-  .m-card{padding:14px 16px}
-  .mc-n{font-size:.7rem}
-  .mc-d{font-size:.62rem}
-  .a-layout{gap:2rem}
-  .img-frame{margin-bottom:1rem}
-  .res-col{gap:12px}
-  .rc-head{padding:16px 18px 14px}
-  .rc-body{padding:18px 18px}
-  .res-name{font-size:1.4rem}
-  .res-crop{font-size:.6rem}
-  .conf-val{font-size:1.8rem}
-  .md-item{padding:10px 12px}
-  .md-val{font-size:.95rem}
-  .info-list{gap:12px}
-  .irow{padding:11px 0}
-  .ir-val{font-size:.75rem}
-  .top-list{gap:8px}
-  .ti-nm{font-size:.65rem}
-  .ti-pct{font-size:.7rem}
-  .pipe-grid{grid-template-columns:1fr;margin-top:3rem}
-  .pipe-step{padding:1rem 1.2rem 1.5rem;text-align:center}
-  .pipe-n{width:40px;height:40px;font-size:.75rem}
-  .pipe-ic{font-size:1.2rem;margin-bottom:.7rem}
-  .pipe-t{font-size:.9rem}
-  .pipe-d{font-size:.7rem}
-  footer{padding:2rem 1rem}
-  .ft-brand{font-size:.85rem}
-  .ft-copy{font-size:.6rem}
-  .ft-links{gap:1rem}
-  .ft-links a{font-size:.6rem}
-}
-@media(max-width:480px){
-  .hero{padding:3rem 1rem 1.5rem}
-  .h1-l1{font-size:.35em}
-  .h1-l2{font-size:2.5rem}
-  .h1-l3{font-size:3.5rem}
-  .hero-sub{font-size:.9rem}
-  .btn-scan,.btn-outline{padding:14px 28px;font-size:.75rem}
-  .crop-section{padding:3rem 1rem 2rem}
-  .crop-title{font-size:2rem}
-  .crop-count{font-size:1.2rem}
-  .dc-grid{gap:12px}
-  .dc-body{padding:14px 16px 16px}
-  .dc-name{font-size:.9rem}
-  .dc-latin{font-size:.7rem}
-  .dc-desc{font-size:.68rem}
-  #scan,#analysis,#pipeline{padding:3rem 1rem}
-  .sec-title{font-size:2rem}
-  .sec-sub{font-size:.8rem}
-  .dropzone{padding:3rem 1.5rem}
-  .dz-title{font-size:1.3rem}
-  .dz-sub{font-size:.68rem}
-  .scan-btn{padding:12px 24px;font-size:.72rem}
-  .dz-fmts{gap:4px}
-  .dz-fmt{font-size:.52rem}
-  .m-card{padding:12px 14px}
-  .mc-ic{font-size:1.1rem}
-  .mc-n{font-size:.68rem}
-  .mc-d{font-size:.6rem}
-  .rc-head{padding:14px 16px 12px}
-  .rc-body{padding:16px 16px}
-  .res-name{font-size:1.25rem}
-  .conf-val{font-size:1.6rem}
-  .md-val{font-size:.9rem}
-  .irow{padding:10px 0}
-  .ir-lbl{font-size:.55rem}
-  .ir-val{font-size:.72rem}
-  .ti-nm{font-size:.62rem}
-  .ti-pct{font-size:.68rem}
-  .pipe-step{padding:.8rem 1rem 1.2rem}
-  .pipe-n{width:38px;height:38px;font-size:.7rem}
-  .pipe-ic{font-size:1.1rem}
-  .pipe-t{font-size:.85rem}
-  .pipe-d{font-size:.68rem}
-  footer{padding:1.5rem 1rem}
-  .ft-brand{font-size:.8rem}
-  .ft-copy{font-size:.58rem}
-  .ft-links{gap:.8rem}
-  .ft-links a{font-size:.58rem}
-  .toast{bottom:1rem;left:1rem;right:1rem;padding:10px 14px;font-size:.7rem}
 }
 </style>
 </head>
@@ -465,9 +339,6 @@ footer::before { content:'';position:absolute;top:0;left:0;right:0;height:1px;ba
     <a href="#scan"   class="nl on"><i class="fas fa-microscope" style="margin-right:5px"></i>Diagnose</a>
     <a href="#pipeline" class="nl"><i class="fas fa-circle-nodes" style="margin-right:5px"></i>Method</a>
   </div>
-  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-    <span></span><span></span><span></span>
-  </button>
   <div class="nav-status"><div class="status-dot"></div>SYS ONLINE · 15 CLASSES</div>
 </nav>
 
@@ -670,21 +541,6 @@ document.querySelectorAll('.rev').forEach(el=>ro.observe(el));
 /* ── Model selector ── */
 document.querySelectorAll('.m-card').forEach(c=>{c.addEventListener('click',()=>{document.querySelectorAll('.m-card').forEach(x=>x.classList.remove('on'));c.classList.add('on');c.querySelector('input').checked=true})});
 
-/* ── Hamburger menu ── */
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.querySelector('.nav-links');
-const nav = document.querySelector('nav');
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open');
-  navLinks.classList.toggle('open');
-});
-document.addEventListener('click', (e) => {
-  if (!nav.contains(e.target)) {
-    hamburger.classList.remove('open');
-    navLinks.classList.remove('open');
-  }
-});
-
 /* ── Drop zone ── */
 const dz=document.getElementById('dz'),fi=document.getElementById('fi');
 dz.addEventListener('click',()=>fi.click());
@@ -709,7 +565,8 @@ function processFile(file) {
     sec.style.display = 'block';
     setTimeout(() => sec.scrollIntoView({behavior:'smooth',block:'start'}), 80);
     showLoading();
-    animSteps(() => runInference(file, src));  // ← must pass file here
+    /* Pass both the file object AND the base64 src */
+    animSteps(() => runInference(file, src));
   };
   r.readAsDataURL(file);
 }
@@ -750,7 +607,7 @@ async function runInference(file, src) {
   formData.append('model', mdl);
 
   try {
-    const response = await fetch('https://plantguard-ai-2.onrender.com/predict', { method:'POST', body:formData });
+    const response = await fetch('/api/predict', { method:'POST', body:formData });
 
     if (!response.ok) {
       let msg = 'Server error';
